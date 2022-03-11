@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>欢迎登录小明论坛</title>
+<link rel="stylesheet" href="plugins/element-ui/2.15.7/theme-chalk/index.min.css">
+<script src="plugins/vue/vue.min.js"></script>
+<script src="plugins/element-ui/2.15.7/index.min.js"></script>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<div class="login-box" id="app" v-on:keydown.enter="login">
+<el-form ref="form" :model="loginUser" :rules="rules">
+<el-form-item  prop="userName">
+ <el-row>
+    <el-col :span="8">
+        <el-input id="userName" v-model="loginUser.userName" placeholder="请输入用户名或邮箱">
+            <template slot="prepend">帐号</template>
+        </el-input> 
+    </el-col>
+ </el-row>
+</el-form-item>
+<el-form-item  prop="userName">
+ <el-row>
+    <el-col :span="8">
+        <el-input id="password" v-model="loginUser.password" type="password" placeholder="请输入密码">
+            <template slot="prepend">密码</template>
+        </el-input>
+    </el-col>
+ </el-row>
+</el-form-item>
+<el-form-item  prop="userName">
+ <el-row>
+    <el-col :span="5">
+        <el-checkbox v-model="loginUser.rememberMe">记住我（一个月内免登录）</el-checkbox>
+    </el-col>
+    <el-col :span="5">
+        还没有账号？<a href="/register.html">去注册</a>
+    </el-col>
+ </el-row>
+</el-form-item>
+ <el-row>
+    <el-col :span="8">
+        <el-button id="login" v-on:click="login" style="width:100%" type="primary">登录</el-button>
+    </el-col>
+ </el-row>
+  </el-form>
+</div> 
+</body>
+<script src="js/login.js" type="text/javascript"></script>
+</html>

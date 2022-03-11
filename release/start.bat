@@ -1,0 +1,1 @@
+java -jar ming.forum.web-0.0.1-SNAPSHOT-exec.jar
